@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="post">
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="action" name="action" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button type="submit" class="btn btn-outline-secondary id=" button-addon2">Поиск</button>
+    </div>
+  </div>
+</form>
+
+<div class="container">
+{% for i in result %}
+
+<div class="row">
+  <div class="col-4">{{ i[0] }}</div>
+  <div class="col-4">{{ i[1] }}</div>
+  <div class="col-4">{{ i[2] }}</div>
+</div>
+---------------------
+{% endfor %}
+
+</div>
+
+
+{% endblock %}
